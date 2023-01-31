@@ -1,3 +1,5 @@
+/* main catalog */
+
 h1,
 h2,
 h3,
@@ -30,11 +32,26 @@ h5,
   color: #fff;
 }
 
+/*button stuff*/
+#enroll-hero span, #enroll-footer span {
+  border-radius: 0 !important;
+  background-color: #022543 ;
+  transition: all .4s ease;
+}
+
+#enroll-hero button, #enroll-footer button {
+  transition: all .4s ease;
+}
+
+#enroll-hero button:hover, #enroll-footer button:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px #efefef;
+}
 
 /*individual course view*/
 #c-holder {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px 60px;
 }
@@ -168,8 +185,8 @@ justify-content: space-between;
     width: 100%;
     height: auto;
   }
-#c-left, #c-right{
-padding-left: 20px;
-padding-right: 20px;
-}
+  #c-left, #c-right{
+    padding-left: 20px;
+    padding-right: 20px;
+    }
 }
