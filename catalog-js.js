@@ -31,7 +31,7 @@ if(document.querySelector('.RegistrationHeader__Title')){
   middRedirect.innerHTML = `<a cursor="pointer" href="https://dlinq.middcreate.net/catalog-request" class="fOyUs_bGBk fOyUs_fKyb fOyUs_UeJS fOyUs_cBHs fOyUs_eWbJ fOyUs_fmDy fOyUs_eeJl fOyUs_cBtr 
   fOyUs_fuTR fOyUs_cnfU fQfxa_bGBk" style="margin: 2.25rem 0px; padding: 0px; border-radius: 0.25rem; border-width: 0px; width: 100%; cursor: pointer;">
   <span class="fQfxa_caGd fQfxa_fKcQ fQfxa_eCSh fQfxa_ImeN undefined fQfxa_dqAF">
-  <span class="fQfxa_biBD">Enrolled Middlebury Students Request Courses Here</span></span></a>`;
+  <span class="fQfxa_biBD">Middlebury Community Members Request Courses Here</span></span></a>`;
   regTitle.parentNode.insertBefore(middRedirect, regTitle.nextSibling);
 }
 
@@ -39,7 +39,6 @@ if(document.querySelector('.RegistrationHeader__Title')){
 if(document.getElementsByName("email")[0]){
   const emailField = document.getElementsByName("email")[0];
   emailField.addEventListener("blur", function() {
-    //alert("Hello World")
     const emailValue = emailField.value.toLowerCase();
     if(emailValue.includes('middlebury.edu')){
       const redirectText = `
@@ -67,3 +66,11 @@ if(document.getElementsByName("email")[0]){
     theModal.style.display = "none";
   }
 }
+
+
+// if( document.querySelector('#user-nav')){
+// const loginButton = document.querySelector('#user-nav');
+// if(loginButton.getAttribute('role') != 'group'){
+//   loginButton.style.display = 'none';
+// }
+// }
