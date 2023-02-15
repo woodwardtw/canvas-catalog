@@ -22,8 +22,22 @@
   --dt-color-graybg-contrast: #000000;
 }
 /*********************************************************************/
-/***** END DESIGN TOOLS HEME IMPORT & CUSTOMIZATION   ****************/
+/***** END DESIGN TOOLS THEME IMPORT & CUSTOMIZATION   ****************/
 /*********************************************************************/
 body.primary-nav-expanded .ic-app-header__logomark {
   margin: 0 10px;
+}
+
+.ic-app-header {
+  border-right: 1px solid #0d395f;
+}
+
+.ic-app-header__menu-list-item--active {
+  background-color: #0d395f;
+}
+
+/*hide unenrollment link*/
+
+#right-side a.btn.button-sidebar-wide.self_unenrollment_link { 
+  display:none; 
 }
