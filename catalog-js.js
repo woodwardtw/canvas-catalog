@@ -16,8 +16,13 @@ function hideModal(){
 }
 
 window.onclick = function(event) {
+  const formDiv = document.querySelector('#myModal');
+  const faqDiv = document.querySelector('#faq-holder')
   if (event.target == formDiv) {
     formDiv.style.display = "none";
+  }
+  if (event.target == faqDiv) {
+    faqDiv.style.display = "none";
   }
 }
 

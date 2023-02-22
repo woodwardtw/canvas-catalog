@@ -201,15 +201,15 @@ display:none;
   bottom: 20px;
   right: 20px;
   width: 150px;
-  height: 30px;
+  height: 40px;
   text-align: center;
   background: #1a8574;
   color: #fff;
-  line-height: 25px;
-  border: 2px solid #e5f1fa;
   cursor: pointer;
   text-decoration: none;
   transition: all .3s ease;
+  font-size:1.4rem;
+  font-weight: 700;
 }
 
 #faq-button:hover {
