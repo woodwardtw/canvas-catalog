@@ -144,7 +144,8 @@ h5,
 }
 
 /* The Modal (background) */
-#product-page .modal, #registration .modal {
+#product-page .modal, #registration .modal,
+#faq-block .modal{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -158,7 +159,8 @@ h5,
 }
 
 /* Modal Content/Box */
-#product-page  .modal-content, #registration .modal-content {
+#product-page  .modal-content, #registration .modal-content,
+#faq-block .modal-content{
   background-color: #e5e4e2;
   margin: 50px auto; /* 15% from the top and centered */
   padding: 20px;
@@ -168,12 +170,14 @@ h5,
 }
 
 /* The Close Button */
-#product-page  .close, #registration .close {
+#product-page  .close, #registration .close,
+#faq-block .close{
   color: #424242;
   float: right;
   font-size: 28px;
   font-weight: bold;
   opacity: 1;
+  cursor: pointer;
 }
 
 #product-page .close:hover,
@@ -191,6 +195,39 @@ display: none;
 /*#user-nav {
 display:none;
 }*/
+
+#faq-button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  background: #1a8574;
+  color: #fff;
+  line-height: 25px;
+  border: 2px solid #e5f1fa;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+#faq-button:hover {
+  transform: scale(1.2);
+}
+
+#faq-modal h2{
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  border-top: 1px solid #022543;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#faq-block .modal-content {
+background-color: #fff;
+}
+
 
 @media (max-width: 576px) {
   .bio-pic {
