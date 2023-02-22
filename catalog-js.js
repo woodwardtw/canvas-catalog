@@ -1,6 +1,6 @@
 if(document.querySelector('#mailing')){
-const mailButton = document.querySelector('#mailing');
-mailButton.addEventListener("click", showForm);
+  const mailButton = document.querySelector('#mailing');
+  mailButton.addEventListener("click", showForm);
   const modalClose = document.querySelector('#closeModal');
   modalClose.addEventListener("click", hideModal);
    var formDiv = document.querySelector('#myModal');
@@ -67,6 +67,51 @@ if(document.getElementsByName("email")[0]){
   }
 }
 
+
+/*FAQ functions*/
+if(document.querySelector('#faq-button')){
+  const faqButton = document.querySelector('#faq-button');
+  faqButton.addEventListener("click", showFaq, false);
+  makeFaqModal(2);
+}
+
+function showFaq(){
+  const faqModal = document.querySelector('#faq-holder');
+  faqModal.style.display = "block";
+  faqModal.focus();
+}
+
+function hideFaqModal(){
+   const faqModal = document.querySelector('#faq-holder');
+  faqModal.style.display = "none";
+}
+
+function makeFaqModal(id){
+fetch(
+  "https://experiments.middcreate.net/faqs/wp-json/wp/v2/pages?id="+id
+)
+  .then(function(response) {
+  // Convert to JSON
+  return response.json();
+})
+  .then(function(data) {
+  // GOOD!
+
+    makeFaq(data[0].content.rendered);
+   const modalClose = document.querySelector('#closeFaqModal');
+   modalClose.addEventListener("click", hideFaqModal);
+  
+});
+}
+
+
+function makeFaq(data){
+  const destination = document.querySelector('#faq-modal');
+  destination.innerHTML = ' <span id="closeFaqModal" class="close">&times;</span>'+data;
+    console.log(data)
+}
+
+/*END FAQ stuff*/
 
 // if( document.querySelector('#user-nav')){
 // const loginButton = document.querySelector('#user-nav');
