@@ -91,9 +91,10 @@ function hideFaqModal(){
   faqModal.style.display = "none";
 }
 
-function makeFaqModal(id){
+function makeFaqModal(){
+let faqid = document.querySelector('#faq-button').dataset.faqid;
 fetch(
-  "https://experiments.middcreate.net/faqs/wp-json/wp/v2/pages?id="+id
+  "https://experiments.middcreate.net/faqs/wp-json/wp/v2/pages/"+faqid
 )
   .then(function(response) {
   // Convert to JSON
@@ -102,7 +103,7 @@ fetch(
   .then(function(data) {
   // GOOD!
 
-    makeFaq(data[0].content.rendered);
+    makeFaq(data.content.rendered);
    const modalClose = document.querySelector('#closeFaqModal');
    modalClose.addEventListener("click", hideFaqModal);
   
@@ -113,7 +114,7 @@ fetch(
 function makeFaq(data){
   const destination = document.querySelector('#faq-modal');
   destination.innerHTML = ' <span id="closeFaqModal" class="close">&times;</span>'+data;
-    console.log(data)
+    //console.log(data)
 }
 
 /*END FAQ stuff*/
