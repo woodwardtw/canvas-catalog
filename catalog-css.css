@@ -230,6 +230,11 @@ background-color: #fff;
 }
 
 
+/*get buttons in header to be white for admin view*/
+.css-rjq4yf-topNavBarItem .css-fhkclk-baseButton__content {
+color: #fff !important;
+}
+
 @media (max-width: 576px) {
   .bio-pic {
     margin: 40px auto;
