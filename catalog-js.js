@@ -103,7 +103,8 @@ fetch(
   .then(function(data) {
   // GOOD!
 
-    makeFaq(data.content.rendered);
+ // makeFaq(data[0].content.rendered);
+   makeFaq(data.faqs_bundle);
    const modalClose = document.querySelector('#closeFaqModal');
    modalClose.addEventListener("click", hideFaqModal);
   
